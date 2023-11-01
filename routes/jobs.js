@@ -12,4 +12,4 @@ const {
 router.route('/').get(getAllJobs).post(createJob)
 router.route('/:id').get(getJob).patch(updateJob).delete(deleteJob)
 
-module.exports = router
+module.exports = router;

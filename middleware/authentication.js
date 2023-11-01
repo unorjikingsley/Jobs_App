@@ -8,6 +8,7 @@ const auth = async (req, res, next) => {
   if (!authHeader || !authHeader.startsWith('Bearer')) {
     throw new UnauthenticatedError('Authentication invalid')
   }
+   
   const token = authHeader.split(' ')[1]
 
   try {
@@ -17,7 +18,7 @@ const auth = async (req, res, next) => {
     next()
   } catch (error) {
     throw new UnauthenticatedError('Authentication invalid')
-  }
-}
+  };
+};
 
-module.exports = auth
+module.exports = auth;
